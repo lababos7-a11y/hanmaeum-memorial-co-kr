@@ -1,0 +1,68 @@
+# 한마음추모공원 아임웹 → 신규 han-maum.co.kr 301 Redirect
+# 생성 기준: docs/migration-map.csv ACTION=301
+# 총 48건 | /35 /64 제외(REVIEW) | EXCLUDE 없음
+# 7차 작업 | redirect chain 없음 | hop=1 보장
+
+# 메인
+/index  /  301
+
+# 카테고리 (수목장/납골당/공원묘지 카테고리)
+/22  /natural-burial/  301
+/27  /memorial-hall/  301
+/28  /memorial-park/  301
+
+# 기타 (장례/공지/비교)
+/23  /notice/  301
+/24  /compare/  301
+/292763707  /funeral/  301
+
+# 자연장 리다이렉트 (아임웹 내부 리다이렉트 URL)
+/21  /natural-burial/ilsan/  301
+
+# 자연장 상세
+/39  /natural-burial/ilsan/  301
+/70  /natural-burial/ilsan/  301
+/71  /natural-burial/yangpyeong/  301
+/72  /natural-burial/yongin/  301
+/73  /natural-burial/yongin/  301
+/74  /natural-burial/namyangju/  301
+/75  /natural-burial/gonjiam/  301
+/76  /natural-burial/hwaseong/  301
+/77  /natural-burial/gimpo/  301
+/78  /natural-burial/gimpo/  301
+/79  /natural-burial/pyeongtaek/  301
+/80  /natural-burial/yangju/  301
+
+# 봉안당 리다이렉트 (아임웹 내부 리다이렉트 URL)
+/29  /memorial-hall/ilsan/  301
+/30  /memorial-hall/yangju/  301
+/31  /memorial-hall/anseong/  301
+/32  /memorial-hall/gimpo/  301
+/34  /memorial-hall/yangpyeong/  301
+/44  /memorial-hall/ilsan/  301
+
+# 봉안당 상세
+/82  /memorial-hall/ilsan/  301
+/83  /memorial-hall/ilsan/  301
+/84  /memorial-hall/yangpyeong/  301
+/85  /memorial-hall/yangju/  301
+/86  /memorial-hall/uiwang/  301
+/87  /memorial-hall/paju/  301
+/88  /memorial-hall/paju/  301
+/89  /memorial-hall/yangpyeong/  301
+/90  /memorial-hall/namyangju/  301
+/91  /memorial-hall/anseong/  301
+/92  /memorial-hall/yongin/  301
+/93  /memorial-hall/gonjiam/  301
+/94  /memorial-hall/bundang/  301
+/95  /memorial-hall/pocheon/  301
+/96  /memorial-hall/gimpo/  301
+/97  /memorial-hall/ganghwa/  301
+
+# 추모공원 상세
+/100  /memorial-park/yongin/  301
+/101  /memorial-park/bundang/  301
+/102  /memorial-park/paldang/  301
+/45  /memorial-park/yangpyeong/  301
+/98  /memorial-park/yangpyeong/  301
+/99  /memorial-park/ilsan/  301

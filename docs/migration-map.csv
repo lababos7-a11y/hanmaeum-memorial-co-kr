@@ -1,0 +1,51 @@
+old_url,old_title,old_type,new_url,action,confidence,note
+https://han-maum.co.kr/index,한마음 추모공원 수목장 납골당 공원묘지 분양전문,메인,/,301,HIGH,아임웹 메인 → 신규 메인. /index → / 리다이렉트
+https://han-maum.co.kr/22,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장 카테고리,/natural-burial/,301,HIGH,H1없음·H2없음. 수목장 목록 페이지로 추정. 신규 자연장 카테고리로 매핑
+https://han-maum.co.kr/27,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당 카테고리,/memorial-hall/,301,HIGH,H1없음·H2없음. 납골당 목록 페이지로 추정. 신규 봉안당 카테고리로 매핑
+https://han-maum.co.kr/21,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-일산(리다이렉트),/natural-burial/ilsan/,301,HIGH,/21 → /39(일산수목장A) 리다이렉트 확인됨. 신규 일산 자연장 상세로 매핑
+https://han-maum.co.kr/292763707,한마음 추모공원 수목장 납골당 공원묘지 분양전문,후불상조/장례,/funeral/,301,MEDIUM,H2=갑작스러운이별·준비된배려. 장례/후불상조 페이지로 판단. 신규 funeral 매핑
+https://han-maum.co.kr/23,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공지/안내,/notice/,301,MEDIUM,H2=작은변화도먼저알려드리겠습니다. 공지/안내 페이지. 신규 notice 매핑
+https://han-maum.co.kr/24,한마음 추모공원 수목장 납골당 공원묘지 분양전문,비교/선택안내,/compare/,301,MEDIUM,H2=더나은안식을위한결정. 비교·선택 안내 페이지. 신규 compare 매핑
+https://han-maum.co.kr/28,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지 카테고리,/memorial-park/,301,HIGH,H1없음·H2없음. 공원묘지 목록 페이지로 추정. 신규 추모공원 카테고리로 매핑
+https://han-maum.co.kr/29,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-일산(리다이렉트),/memorial-hall/ilsan/,301,HIGH,/29 → /82(일산납골당봉안당A) 리다이렉트 확인됨. 신규 일산 봉안당 상세로 매핑
+https://han-maum.co.kr/30,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-양주(리다이렉트),/memorial-hall/yangju/,301,HIGH,/30 → /85(양주납골당봉안당) 리다이렉트 확인됨. 신규 양주 봉안당 상세로 매핑
+https://han-maum.co.kr/31,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-안성(리다이렉트),/memorial-hall/anseong/,301,HIGH,/31 → /91(안성납골당봉안당) 리다이렉트 확인됨. 신규 안성 봉안당 상세로 매핑
+https://han-maum.co.kr/32,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-김포(리다이렉트),/memorial-hall/gimpo/,301,HIGH,/32 → /96(김포납골당봉안당) 리다이렉트 확인됨. 신규 김포 봉안당 상세로 매핑
+https://han-maum.co.kr/34,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-양평(리다이렉트),/memorial-hall/yangpyeong/,301,HIGH,/34 → /84(양평납골당봉안당A) 리다이렉트 확인됨. 신규 양평 봉안당 상세로 매핑
+https://han-maum.co.kr/35,한마음 추모공원 수목장 납골당 공원묘지 분양전문,시스템/빈페이지,EXCLUDE,,LOW,H1없음·H2없음·OG만 존재. 콘텐츠 미확인. EXCLUDE 검토 필요
+https://han-maum.co.kr/39,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-일산A,/natural-burial/ilsan/,301,HIGH,H1=일산수목장A. canonical=/39. 신규 일산 자연장 상세로 매핑
+https://han-maum.co.kr/44,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-일산(리다이렉트2),/memorial-hall/ilsan/,301,HIGH,/44 → /82(일산납골당봉안당A) 리다이렉트. /29와 동일 목적지. 중복 리다이렉트 후보
+https://han-maum.co.kr/45,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-양평(리다이렉트),/memorial-park/yangpyeong/,301,MEDIUM,/45 → /98(양평공원묘지) 리다이렉트. 6.5차 신규 양평추모공원 페이지 생성으로 301 후보 확정
+https://han-maum.co.kr/64,한마음 추모공원 수목장 납골당 공원묘지 분양전문,시스템/기타,REVIEW,,LOW,H1없음·H2없음. 페이지 유형 미확인. REVIEW
+https://han-maum.co.kr/70,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-일산B,/natural-burial/ilsan/,301,MEDIUM,H1=일산수목장B. 신규에 일산 자연장 단일 페이지만 존재. /39와 동일 target
+https://han-maum.co.kr/71,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-양평,/natural-burial/yangpyeong/,301,HIGH,H1=양평수목장. 신규 양평 자연장 상세로 매핑
+https://han-maum.co.kr/72,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-용인A,/natural-burial/yongin/,301,HIGH,H1=용인수목장A. 신규 용인 자연장 상세로 매핑
+https://han-maum.co.kr/73,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-용인B,/natural-burial/yongin/,301,MEDIUM,H1=용인수목장B. 신규에 용인 자연장 단일 페이지만 존재. /72와 동일 target
+https://han-maum.co.kr/74,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-남양주,/natural-burial/namyangju/,301,HIGH,H1=남양주수목장. 신규 남양주 자연장 상세로 매핑
+https://han-maum.co.kr/75,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-곤지암,/natural-burial/gonjiam/,301,HIGH,H1=곤지암수목장. 신규 곤지암 자연장 상세로 매핑
+https://han-maum.co.kr/76,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-화성,/natural-burial/hwaseong/,301,HIGH,H1=화성수목장. 신규 화성 자연장 상세로 매핑
+https://han-maum.co.kr/77,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-김포A,/natural-burial/gimpo/,301,HIGH,H1=김포수목장A. 신규 김포 자연장 상세로 매핑
+https://han-maum.co.kr/78,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-김포B,/natural-burial/gimpo/,301,MEDIUM,H1=김포수목장B. 신규에 김포 자연장 단일 페이지만 존재. /77과 동일 target
+https://han-maum.co.kr/79,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-평택,/natural-burial/pyeongtaek/,301,MEDIUM,H1=평택수목장. 6.5차 신규 평택자연장 페이지 생성으로 301 후보 확정
+https://han-maum.co.kr/80,한마음 추모공원 수목장 납골당 공원묘지 분양전문,수목장-양주,/natural-burial/yangju/,301,HIGH,H1=양주수목장. 신규 양주 자연장 상세로 매핑
+https://han-maum.co.kr/82,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-일산A,/memorial-hall/ilsan/,301,HIGH,H1=일산납골당봉안당A. canonical=/82. 신규 일산 봉안당 상세로 매핑
+https://han-maum.co.kr/83,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-일산B,/memorial-hall/ilsan/,301,MEDIUM,H1=일산납골당봉안당B. 신규에 일산 봉안당 단일 페이지만 존재. /82와 동일 target
+https://han-maum.co.kr/84,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-양평A,/memorial-hall/yangpyeong/,301,HIGH,H1=양평납골당봉안당A. canonical=/84. 신규 양평 봉안당 상세로 매핑
+https://han-maum.co.kr/85,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-양주,/memorial-hall/yangju/,301,HIGH,H1=양주납골당봉안당. 신규 양주 봉안당 상세로 매핑
+https://han-maum.co.kr/86,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-의왕,/memorial-hall/uiwang/,301,HIGH,H1=의왕납골당봉안당. 신규 의왕 봉안당 상세로 매핑
+https://han-maum.co.kr/87,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-파주B,/memorial-hall/paju/,301,HIGH,H1=파주납골당봉안당B. 신규 파주 봉안당 상세로 매핑
+https://han-maum.co.kr/88,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-파주A,/memorial-hall/paju/,301,HIGH,H1=파주납골당봉안당A. /87과 동일 target. 신규 파주 봉안당 단일 페이지 존재
+https://han-maum.co.kr/89,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-양평B,/memorial-hall/yangpyeong/,301,MEDIUM,H1=양평납골당봉안당B. /84와 동일 target. 신규 양평 봉안당 단일 페이지 존재
+https://han-maum.co.kr/90,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-남양주,/memorial-hall/namyangju/,301,HIGH,H1=남양주납골당봉안당. 신규 남양주 봉안당 상세로 매핑
+https://han-maum.co.kr/91,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-안성,/memorial-hall/anseong/,301,HIGH,H1=안성납골당봉안당. 신규 안성 봉안당 상세로 매핑
+https://han-maum.co.kr/92,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-용인,/memorial-hall/yongin/,301,HIGH,H1=용인납골당봉안당. 신규 용인 봉안당 상세로 매핑
+https://han-maum.co.kr/93,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-곤지암,/memorial-hall/gonjiam/,301,HIGH,H1=곤지암납골당봉안당. 신규 곤지암 봉안당 상세로 매핑
+https://han-maum.co.kr/94,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-분당,/memorial-hall/bundang/,301,HIGH,H1=분당납골당봉안당. 신규 분당 봉안당 상세로 매핑
+https://han-maum.co.kr/95,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-포천,/memorial-hall/pocheon/,301,HIGH,H1=포천납골당봉안당. 신규 포천 봉안당 상세로 매핑
+https://han-maum.co.kr/96,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-김포,/memorial-hall/gimpo/,301,HIGH,H1=김포납골당봉안당. 신규 김포 봉안당 상세로 매핑
+https://han-maum.co.kr/97,한마음 추모공원 수목장 납골당 공원묘지 분양전문,납골당-강화,/memorial-hall/ganghwa/,301,HIGH,H1=인천강화납골당봉안당. 신규 강화 봉안당 상세로 매핑
+https://han-maum.co.kr/98,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-양평,/memorial-park/yangpyeong/,301,MEDIUM,H1=양평공원묘지. 6.5차 신규 양평추모공원 페이지 생성으로 301 후보 확정
+https://han-maum.co.kr/99,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-일산,/memorial-park/ilsan/,301,MEDIUM,H1=일산공원묘지. 6.5차 신규 일산추모공원 페이지 생성으로 301 후보 확정
+https://han-maum.co.kr/100,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-용인,/memorial-park/yongin/,301,HIGH,H1=용인공원묘지. 신규 용인 추모공원 상세로 매핑
+https://han-maum.co.kr/101,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-분당,/memorial-park/bundang/,301,MEDIUM,H1=분당공원묘지. 6.5차 신규 분당추모공원 페이지 생성으로 301 후보 확정
+https://han-maum.co.kr/102,한마음 추모공원 수목장 납골당 공원묘지 분양전문,공원묘지-팔당,/memorial-park/paldang/,301,MEDIUM,H1=팔당공원묘지. 6.5차 신규 팔당추모공원 페이지 생성으로 301 후보 확정
