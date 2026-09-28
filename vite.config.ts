@@ -2,6 +2,20 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import { copyFileSync, mkdirSync, readdirSync, statSync } from 'fs'
 
+// 디렉토리 재귀 복사 헬퍼
+function copyDirSync(src: string, dest: string) {
+  mkdirSync(dest, { recursive: true })
+  for (const entry of readdirSync(src)) {
+    const srcPath  = `${src}/${entry}`
+    const destPath = `${dest}/${entry}`
+    if (statSync(srcPath).isDirectory()) {
+      copyDirSync(srcPath, destPath)
+    } else {
+      copyFileSync(srcPath, destPath)
+    }
+  }
+}
+
 // static 파일 복사 플러그인
 function copyStaticPlugin() {
   return {
@@ -16,6 +30,9 @@ function copyStaticPlugin() {
       // _redirects 복사 (Cloudflare Pages 301 redirect 규칙)
       copyFileSync('public/_redirects', 'dist/_redirects')
       console.log('✓ _redirects copied')
+      // 메인 히어로 슬라이드 이미지 복사
+      copyDirSync('public/images/main', 'dist/images/main')
+      console.log('✓ images/main/ copied')
     }
   }
 }

@@ -104,12 +104,17 @@
   </nav>
 </header>
 
-<!-- ══ 히어로 ══ -->
-<section class="relative bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 text-white overflow-hidden">
-  <div class="absolute inset-0 opacity-20">
-    <div class="w-full h-full" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-  </div>
-  <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24">
+<!-- ══ 히어로 슬라이드 ══ -->
+<section id="hero-slider" class="relative text-white overflow-hidden" style="height:520px;min-height:420px;">
+  <!-- 슬라이드 배경 이미지 3장 -->
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="background-image:url('/images/main/자연장.webp');background-size:cover;background-position:center;opacity:1;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="background-image:url('/images/main/봉안당.webp');background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="background-image:url('/images/main/추모공원.webp');background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <!-- 어두운 오버레이 -->
+  <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.15) 100%);z-index:1;"></div>
+
+  <!-- 콘텐츠 -->
+  <div class="relative max-w-6xl mx-auto px-4 h-full flex items-center" style="z-index:2;">
     <div class="max-w-2xl">
       <span class="section-badge mb-4">수도권 장지 통합상담센터</span>
       <h1 class="text-3xl md:text-5xl font-bold leading-tight mt-4 mb-6">
@@ -131,7 +136,77 @@
       <p class="text-sm opacity-70 mt-4">· 상담 완전 무료 · 영업 전화 없음 · 평일 09:00~18:00</p>
     </div>
   </div>
+
+  <!-- PC 좌우 컨트롤 -->
+  <button id="heroPrev" aria-label="이전 슬라이드"
+    class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full items-center justify-center"
+    style="z-index:3;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.4);cursor:pointer;transition:background 0.2s;">
+    <i class="fas fa-chevron-left text-white"></i>
+  </button>
+  <button id="heroNext" aria-label="다음 슬라이드"
+    class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full items-center justify-center"
+    style="z-index:3;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.4);cursor:pointer;transition:background 0.2s;">
+    <i class="fas fa-chevron-right text-white"></i>
+  </button>
+
+  <!-- 하단 인디케이터 -->
+  <div id="heroIndicators" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2" style="z-index:3;" role="tablist" aria-label="슬라이드 선택">
+    <button class="hero-dot w-2.5 h-2.5 rounded-full transition-all duration-300" style="background:rgba(255,255,255,0.9);" aria-label="슬라이드 1" aria-selected="true" role="tab"></button>
+    <button class="hero-dot w-2.5 h-2.5 rounded-full transition-all duration-300" style="background:rgba(255,255,255,0.4);" aria-label="슬라이드 2" aria-selected="false" role="tab"></button>
+    <button class="hero-dot w-2.5 h-2.5 rounded-full transition-all duration-300" style="background:rgba(255,255,255,0.4);" aria-label="슬라이드 3" aria-selected="false" role="tab"></button>
+  </div>
 </section>
+
+<script>
+(function() {
+  var slides = document.querySelectorAll('#hero-slider .hero-slide');
+  var dots   = document.querySelectorAll('#heroIndicators .hero-dot');
+  var total  = slides.length;
+  var cur    = 0;
+  var timer  = null;
+
+  function goTo(idx) {
+    slides[cur].style.opacity = '0';
+    dots[cur].style.background = 'rgba(255,255,255,0.4)';
+    dots[cur].setAttribute('aria-selected', 'false');
+    cur = (idx + total) % total;
+    slides[cur].style.opacity = '1';
+    dots[cur].style.background = 'rgba(255,255,255,0.9)';
+    dots[cur].setAttribute('aria-selected', 'true');
+  }
+
+  function startAuto() {
+    timer = setInterval(function() { goTo(cur + 1); }, 5000);
+  }
+
+  function resetAuto() {
+    clearInterval(timer);
+    startAuto();
+  }
+
+  // 좌우 버튼
+  var prevBtn = document.getElementById('heroPrev');
+  var nextBtn = document.getElementById('heroNext');
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(cur - 1); resetAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(cur + 1); resetAuto(); });
+
+  // 인디케이터
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() { goTo(i); resetAuto(); });
+  });
+
+  // 모바일 스와이프
+  var touchStartX = 0;
+  var hero = document.getElementById('hero-slider');
+  hero.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  hero.addEventListener('touchend', function(e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { goTo(dx < 0 ? cur + 1 : cur - 1); resetAuto(); }
+  }, { passive: true });
+
+  startAuto();
+})();
+</script>
 
 <!-- ══ 통계 배지 ══ -->
 <section class="bg-blue-600 text-white py-6">
