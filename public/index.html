@@ -106,10 +106,16 @@
 
 <!-- ══ 히어로 슬라이드 ══ -->
 <section id="hero-slider" class="relative text-white overflow-hidden" style="height:520px;min-height:420px;">
-  <!-- 슬라이드 배경 이미지 3장 (경로는 JS로 주입 — Vite 번들 대상 제외) -->
-  <div class="hero-slide absolute inset-0" aria-hidden="true" data-bg="/images/main/자연장.webp" style="background-size:cover;background-position:center;opacity:1;transition:opacity 1s ease-in-out;"></div>
-  <div class="hero-slide absolute inset-0" aria-hidden="true" data-bg="/images/main/봉안당.webp" style="background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;"></div>
-  <div class="hero-slide absolute inset-0" aria-hidden="true" data-bg="/images/main/추모공원.webp" style="background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <!-- 슬라이드 배경 이미지 3장 (data-src로 Vite 번들 우회) -->
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="opacity:1;transition:opacity 1s ease-in-out;">
+    <img data-src="/images/main/natural-burial.webp" alt="자연장" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+  </div>
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="opacity:0;transition:opacity 1s ease-in-out;">
+    <img data-src="/images/main/memorial-hall.webp" alt="봉안당" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+  </div>
+  <div class="hero-slide absolute inset-0" aria-hidden="true" style="opacity:0;transition:opacity 1s ease-in-out;">
+    <img data-src="/images/main/memorial-park.webp" alt="추모공원" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+  </div>
   <!-- 어두운 오버레이 -->
   <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.15) 100%);z-index:1;"></div>
 
@@ -161,10 +167,10 @@
 (function() {
   var slides = document.querySelectorAll('#hero-slider .hero-slide');
   var dots   = document.querySelectorAll('#heroIndicators .hero-dot');
-  // data-bg → background-image 주입 (Vite 번들링 우회)
+  // data-src → src 주입 (Vite img 번들링 우회)
   slides.forEach(function(s) {
-    var bg = s.getAttribute('data-bg');
-    if (bg) s.style.backgroundImage = "url('" + bg + "')";
+    var img = s.querySelector('img[data-src]');
+    if (img) img.src = img.getAttribute('data-src');
   });
   var total  = slides.length;
   var cur    = 0;
