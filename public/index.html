@@ -105,18 +105,13 @@
 </header>
 
 <!-- ══ 히어로 슬라이드 ══ -->
-<style>
-.hs-bg-0 { background-image: url('/images/main/natural-burial.webp'); }
-.hs-bg-1 { background-image: url('/images/main/memorial-hall.webp'); }
-.hs-bg-2 { background-image: url('/images/main/memorial-park.webp'); }
-</style>
 <section id="hero-slider" class="text-white" style="position:relative;overflow:hidden;height:520px;min-height:420px;">
-  <!-- 슬라이드 배경 이미지 3장 (CSS background-image, position 인라인 명시) -->
-  <div class="hero-slide hs-bg-0" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:1;transition:opacity 1s ease-in-out;"></div>
-  <div class="hero-slide hs-bg-1" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
-  <div class="hero-slide hs-bg-2" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <!-- 슬라이드 배경 이미지 3장: JS에서 data-img로 backgroundImage 주입 (Vite 번들 우회) -->
+  <div class="hero-slide" data-img="/images/main/natural-burial.webp" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:520px;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:1;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide" data-img="/images/main/memorial-hall.webp" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:520px;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide" data-img="/images/main/memorial-park.webp" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:520px;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
   <!-- 어두운 오버레이 -->
-  <div aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to right,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.15) 100%);"></div>
+  <div aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:520px;background:linear-gradient(to right,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.15) 100%);"></div>
 
   <!-- 콘텐츠 -->
   <div class="relative max-w-6xl mx-auto px-4 h-full flex items-center" style="z-index:1;">
@@ -166,6 +161,11 @@
 (function() {
   var slides = document.querySelectorAll('#hero-slider .hero-slide');
   var dots   = document.querySelectorAll('#heroIndicators .hero-dot');
+  // data-img → backgroundImage 주입 (Vite img/url() 번들링 우회)
+  slides.forEach(function(s) {
+    var img = s.getAttribute('data-img');
+    if (img) s.style.backgroundImage = "url('" + img + "')";
+  });
   var total  = slides.length;
   var cur    = 0;
   var timer  = null;

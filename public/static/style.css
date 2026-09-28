@@ -120,9 +120,8 @@ button, [role="button"] { touch-action: manipulation; }
 /* ── 시설 카드 이미지 ── */
 .facility-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 8px 8px 0 0; }
 
-/* ── 히어로 슬라이더 ── */
-.hero-slide { display: none; }
-.hero-slide.active { display: block; }
+/* ── 히어로 슬라이더 (opacity 전환 방식 — display:none 제거) ── */
+.hero-slide { display: block; }
 
 /* ── 슬라이더 이미지 터치 방지 ── */
 .slider-img { user-select: none; -webkit-user-drag: none; pointer-events: none; }
