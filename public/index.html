@@ -105,27 +105,18 @@
 </header>
 
 <!-- ══ 히어로 슬라이드 ══ -->
-<!-- 슬라이드 배경 CSS: <style>로 선언 → Vite 번들 대상 아님, /images/main/ URL 그대로 유지 -->
 <style>
-.hero-slide-0 { background-image: url('/images/main/natural-burial.webp'); }
-.hero-slide-1 { background-image: url('/images/main/memorial-hall.webp'); }
-.hero-slide-2 { background-image: url('/images/main/memorial-park.webp'); }
-.hero-slide-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: opacity 1s ease-in-out;
-}
+.hs-bg-0 { background-image: url('/images/main/natural-burial.webp'); }
+.hs-bg-1 { background-image: url('/images/main/memorial-hall.webp'); }
+.hs-bg-2 { background-image: url('/images/main/memorial-park.webp'); }
 </style>
-<section id="hero-slider" class="relative text-white overflow-hidden" style="height:520px;min-height:420px;">
-  <!-- 슬라이드 배경 이미지 3장 (CSS background-image, <style> 태그 선언으로 Vite 번들 우회) -->
-  <div class="hero-slide hero-slide-bg hero-slide-0" aria-hidden="true" style="opacity:1;"></div>
-  <div class="hero-slide hero-slide-bg hero-slide-1" aria-hidden="true" style="opacity:0;"></div>
-  <div class="hero-slide hero-slide-bg hero-slide-2" aria-hidden="true" style="opacity:0;"></div>
-  <!-- 어두운 오버레이 (DOM 순서로 slide 위에 쌓임, z-index 없음) -->
-  <div class="absolute inset-0" style="background:linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.15) 100%);"></div>
+<section id="hero-slider" class="text-white" style="position:relative;overflow:hidden;height:520px;min-height:420px;">
+  <!-- 슬라이드 배경 이미지 3장 (CSS background-image, position 인라인 명시) -->
+  <div class="hero-slide hs-bg-0" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:1;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide hs-bg-1" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <div class="hero-slide hs-bg-2" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1s ease-in-out;"></div>
+  <!-- 어두운 오버레이 -->
+  <div aria-hidden="true" style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to right,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.35) 60%,rgba(0,0,0,0.15) 100%);"></div>
 
   <!-- 콘텐츠 -->
   <div class="relative max-w-6xl mx-auto px-4 h-full flex items-center" style="z-index:1;">
