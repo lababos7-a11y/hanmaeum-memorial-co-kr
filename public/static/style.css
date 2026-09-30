@@ -125,3 +125,39 @@ button, [role="button"] { touch-action: manipulation; }
 
 /* ── 슬라이더 이미지 터치 방지 ── */
 .slider-img { user-select: none; -webkit-user-drag: none; pointer-events: none; }
+
+/* ── 픽토그램 아이콘 공통 ── */
+/* FontAwesome 6.4.0 (CDN 기존 포함) — 단색 line/outline 스타일 */
+.pict-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #173B57;          /* 사이트 네이비 딥그린 메인컬러 */
+  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+/* 로고·인라인 소형 (24px) */
+.pict-icon.pict-sm  { font-size: 1.25rem; }  /* 20px */
+/* 카드 타이틀·안내 중형 (28~34px) */
+.pict-icon.pict-md  { font-size: 1.75rem; }  /* 28px */
+/* 섹션 대표 대형 (40~48px) */
+.pict-icon.pict-lg  { font-size: 2.5rem;  }  /* 40px */
+/* 카드 플레이스홀더 초대형 (56px) */
+.pict-icon.pict-xl  { font-size: 3.5rem;  }  /* 56px */
+
+/* 카드 배경 플레이스홀더 공통 */
+.pict-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;           /* h-40 */
+}
+
+/* 모바일: 아이콘 크기 약간 축소 */
+@media (max-width: 640px) {
+  .pict-icon.pict-md { font-size: 1.5rem; }
+  .pict-icon.pict-lg { font-size: 2rem;   }
+  .pict-icon.pict-xl { font-size: 3rem;   }
+}
