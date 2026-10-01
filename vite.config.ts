@@ -48,6 +48,9 @@ function copyStaticPlugin() {
       // 김포 애기봉자연장 실사 이미지 복사
       copyDirSync('public/images/natural-burial/gimpo/aegibong', 'dist/images/natural-burial/gimpo/aegibong')
       console.log('✓ images/natural-burial/gimpo/aegibong/ copied')
+      // 양주 자연장 실사 이미지 복사
+      copyDirSync('public/images/natural-burial/yangju', 'dist/images/natural-burial/yangju')
+      console.log('✓ images/natural-burial/yangju/ copied')
     }
   }
 }
