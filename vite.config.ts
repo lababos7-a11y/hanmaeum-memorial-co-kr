@@ -51,6 +51,9 @@ function copyStaticPlugin() {
       // 양주 자연장 실사 이미지 복사
       copyDirSync('public/images/natural-burial/yangju', 'dist/images/natural-burial/yangju')
       console.log('✓ images/natural-burial/yangju/ copied')
+      // 양평 자연장 실사 이미지 복사
+      copyDirSync('public/images/natural-burial/yangpyeong', 'dist/images/natural-burial/yangpyeong')
+      console.log('✓ images/natural-burial/yangpyeong/ copied')
     }
   }
 }
