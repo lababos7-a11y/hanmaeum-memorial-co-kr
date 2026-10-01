@@ -77,24 +77,286 @@
   </div>
 </section>
 
-<!-- 대표 이미지 -->
+<!-- 이미지 갤러리 슬라이드 -->
 <section class="bg-white pt-10 pb-0">
   <div class="max-w-6xl mx-auto px-4">
-    <figure class="rounded-2xl overflow-hidden shadow-md">
-      <img
-        src="/images/natural-burial/ilsan/ilsan-01.jpg"
-        alt="일산 자연장 수목장 전경 — 경기도 고양시 일산"
-        class="w-full object-cover"
-        style="max-height: 480px;"
-        loading="eager"
-      />
-    </figure>
+
+    <!-- 메인 뷰어 -->
+    <div id="ilsan-gallery" class="ilsan-gallery">
+
+      <!-- 대표 이미지 영역 -->
+      <div class="ilsan-gallery__main rounded-2xl overflow-hidden shadow-md relative select-none" style="background:#1a2e1a;">
+        <!-- 슬라이드 목록 -->
+        <div class="ilsan-gallery__slides" aria-live="polite">
+          <figure class="ilsan-gallery__slide" data-idx="0">
+            <img src="/images/natural-burial/ilsan/ilsan-01.jpg" alt="일산 자연장 수목장 전경 — 경기도 고양시 일산" loading="eager" class="ilsan-gallery__img" />
+          </figure>
+          <figure class="ilsan-gallery__slide" data-idx="1">
+            <img src="/images/natural-burial/ilsan/ilsan-02.jpg" alt="일산 자연장 수목장 구역 전경" loading="lazy" class="ilsan-gallery__img" />
+          </figure>
+          <figure class="ilsan-gallery__slide" data-idx="2">
+            <img src="/images/natural-burial/ilsan/ilsan-03.jpg" alt="일산 자연장 소나무 안치 구역" loading="lazy" class="ilsan-gallery__img" />
+          </figure>
+          <figure class="ilsan-gallery__slide" data-idx="3">
+            <img src="/images/natural-burial/ilsan/ilsan-04.jpg" alt="일산 자연장 수목 안치 공간" loading="lazy" class="ilsan-gallery__img" />
+          </figure>
+          <figure class="ilsan-gallery__slide" data-idx="4">
+            <img src="/images/natural-burial/ilsan/ilsan-05.jpg" alt="일산 자연장 야외 조경 전경" loading="lazy" class="ilsan-gallery__img" />
+          </figure>
+          <figure class="ilsan-gallery__slide" data-idx="5">
+            <img src="/images/natural-burial/ilsan/ilsan-06.jpg" alt="일산 자연장 수목 구역 전망" loading="lazy" class="ilsan-gallery__img" />
+          </figure>
+        </div>
+
+        <!-- 좌우 화살표 -->
+        <button class="ilsan-gallery__arrow ilsan-gallery__arrow--prev" aria-label="이전 이미지" type="button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="ilsan-gallery__arrow ilsan-gallery__arrow--next" aria-label="다음 이미지" type="button">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- 카운터 -->
+        <div class="ilsan-gallery__counter" aria-label="이미지 위치">
+          <span class="ilsan-gallery__counter-cur">1</span>
+          <span class="ilsan-gallery__counter-sep"> / </span>
+          <span class="ilsan-gallery__counter-tot">6</span>
+        </div>
+      </div><!-- /.ilsan-gallery__main -->
+
+      <!-- 썸네일 트랙 -->
+      <div class="ilsan-gallery__thumbs" role="tablist" aria-label="이미지 목록">
+        <button class="ilsan-gallery__thumb ilsan-gallery__thumb--active" role="tab" aria-selected="true"  data-idx="0" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-01.jpg" alt="썸네일 1" loading="lazy" />
+        </button>
+        <button class="ilsan-gallery__thumb" role="tab" aria-selected="false" data-idx="1" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-02.jpg" alt="썸네일 2" loading="lazy" />
+        </button>
+        <button class="ilsan-gallery__thumb" role="tab" aria-selected="false" data-idx="2" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-03.jpg" alt="썸네일 3" loading="lazy" />
+        </button>
+        <button class="ilsan-gallery__thumb" role="tab" aria-selected="false" data-idx="3" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-04.jpg" alt="썸네일 4" loading="lazy" />
+        </button>
+        <button class="ilsan-gallery__thumb" role="tab" aria-selected="false" data-idx="4" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-05.jpg" alt="썸네일 5" loading="lazy" />
+        </button>
+        <button class="ilsan-gallery__thumb" role="tab" aria-selected="false" data-idx="5" type="button">
+          <img src="/images/natural-burial/ilsan/ilsan-06.jpg" alt="썸네일 6" loading="lazy" />
+        </button>
+      </div><!-- /.ilsan-gallery__thumbs -->
+
+    </div><!-- /#ilsan-gallery -->
+
   </div>
 </section>
 
-<section class="py-14 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<style>
+/* ── 일산 갤러리 ── */
+.ilsan-gallery { --gap: 8px; }
+
+/* 메인 뷰어 */
+.ilsan-gallery__main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.ilsan-gallery__slides {
+  display: flex;
+  width: 100%;
+  transition: transform .35s ease;
+}
+.ilsan-gallery__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ilsan-gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;          /* 비율 유지, crop 없음 */
+  object-position: center;
+}
+@media (max-width: 640px) {
+  .ilsan-gallery__img { max-height: 280px; }
+}
+
+/* 화살표 */
+.ilsan-gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.82);
+  color: #1a3a1a;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  transition: background .2s;
+}
+.ilsan-gallery__arrow:hover { background: #fff; }
+.ilsan-gallery__arrow--prev { left: 12px; }
+.ilsan-gallery__arrow--next { right: 12px; }
+@media (max-width: 640px) {
+  .ilsan-gallery__arrow { width: 32px; height: 32px; font-size: 12px; }
+  .ilsan-gallery__arrow--prev { left: 6px; }
+  .ilsan-gallery__arrow--next { right: 6px; }
+}
+
+/* 카운터 */
+.ilsan-gallery__counter {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0,0,0,.45);
+  padding: 2px 8px;
+  border-radius: 20px;
+  pointer-events: none;
+  line-height: 1.6;
+}
+
+/* 썸네일 트랙 */
+.ilsan-gallery__thumbs {
+  display: flex;
+  gap: var(--gap);
+  margin-top: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;          /* Firefox */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+.ilsan-gallery__thumbs::-webkit-scrollbar { display: none; }
+
+.ilsan-gallery__thumb {
+  flex: 0 0 calc((100% - 5 * var(--gap)) / 6);
+  min-width: 64px;
+  max-width: 100px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  transition: border-color .2s, opacity .2s;
+  opacity: .65;
+}
+.ilsan-gallery__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.ilsan-gallery__thumb--active {
+  border-color: #15803d;   /* green-700 */
+  opacity: 1;
+}
+.ilsan-gallery__thumb:hover:not(.ilsan-gallery__thumb--active) { opacity: .85; }
+</style>
+
+<script>
+(function () {
+  var gallery = document.getElementById('ilsan-gallery');
+  if (!gallery) return;
+
+  var slides     = gallery.querySelectorAll('.ilsan-gallery__slide');
+  var thumbs     = gallery.querySelectorAll('.ilsan-gallery__thumb');
+  var track      = gallery.querySelector('.ilsan-gallery__slides');
+  var btnPrev    = gallery.querySelector('.ilsan-gallery__arrow--prev');
+  var btnNext    = gallery.querySelector('.ilsan-gallery__arrow--next');
+  var counterCur = gallery.querySelector('.ilsan-gallery__counter-cur');
+  var thumbWrap  = gallery.querySelector('.ilsan-gallery__thumbs');
+
+  var current = 0;
+  var total   = slides.length;
+
+  function goTo(idx) {
+    if (idx < 0) idx = total - 1;
+    if (idx >= total) idx = 0;
+    current = idx;
+
+    /* 슬라이드 이동 */
+    track.style.transform = 'translateX(-' + (100 * current) + '%)';
+
+    /* 카운터 */
+    counterCur.textContent = current + 1;
+
+    /* 썸네일 활성화 */
+    thumbs.forEach(function (t, i) {
+      var active = i === current;
+      t.classList.toggle('ilsan-gallery__thumb--active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    /* 활성 썸네일 스크롤 into view */
+    var activeThumb = thumbs[current];
+    if (activeThumb && thumbWrap) {
+      var tw = thumbWrap.offsetWidth;
+      var tLeft = activeThumb.offsetLeft;
+      var tW    = activeThumb.offsetWidth;
+      var scrollTarget = tLeft - tw / 2 + tW / 2;
+      thumbWrap.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+    }
+  }
+
+  /* 화살표 */
+  btnPrev.addEventListener('click', function () { goTo(current - 1); });
+  btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+  /* 썸네일 클릭 */
+  thumbs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      goTo(parseInt(t.dataset.idx, 10));
+    });
+  });
+
+  /* 터치 swipe */
+  var touchStartX = 0;
+  var touchStartY = 0;
+  var mainEl = gallery.querySelector('.ilsan-gallery__main');
+
+  mainEl.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].clientX;
+    touchStartY = e.changedTouches[0].clientY;
+  }, { passive: true });
+
+  mainEl.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    /* 수평 이동이 수직보다 클 때만 처리 */
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) goTo(current + 1);
+      else         goTo(current - 1);
+    }
+  }, { passive: true });
+
+  /* 키보드 */
+  mainEl.setAttribute('tabindex', '0');
+  mainEl.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  /* 초기화 */
+  goTo(0);
+})();
+</script>
+
+
       <div>
         <h2 class="text-xl font-bold mb-6">일산에서 자연장을 찾을 때 비교해야 할 조건</h2>
         <div class="space-y-4">
@@ -147,33 +409,7 @@
       </div>
     </div>
 
-    <!-- 시설 갤러리 -->
-    <div class="mt-12">
-      <h2 class="text-xl font-bold mb-5">일산 자연장 시설 사진</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-02.jpg" alt="일산 자연장 수목장 구역 전경" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-03.jpg" alt="일산 자연장 소나무 안치 구역" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-04.jpg" alt="일산 자연장 수목 안치 공간" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-05.jpg" alt="일산 자연장 야외 조경 전경" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-06.jpg" alt="일산 자연장 수목 구역 전망" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square">
-          <img src="/images/natural-burial/ilsan/ilsan-07.jpg" alt="일산 자연장 잔디 안치 공간" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm aspect-square col-span-2 md:col-span-1">
-          <img src="/images/natural-burial/ilsan/ilsan-08.jpg" alt="일산 자연장 시설 전경" class="w-full h-full object-cover" loading="lazy" />
-        </figure>
-      </div>
-    </div>
+    <!-- 시설 갤러리: 위 슬라이드로 통합됨 -->
 
     <div class="mt-12 bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
       <h3 class="font-bold text-gray-800 mb-3">자연장 비용 확인 시 주의사항</h3>
