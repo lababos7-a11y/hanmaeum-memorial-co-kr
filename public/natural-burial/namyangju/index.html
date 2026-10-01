@@ -75,6 +75,271 @@
   </div>
 </section>
 
+<!-- 남양주자연장 이미지 갤러리 슬라이드 -->
+<section class="bg-white pt-10 pb-0">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div id="namyangju-gallery" class="namyangju-gallery">
+
+      <!-- 대표 이미지 영역 -->
+      <div class="namyangju-gallery__main rounded-2xl overflow-hidden shadow-md relative select-none" style="background:#1a2e1a;">
+        <div class="namyangju-gallery__slides" aria-live="polite">
+          <figure class="namyangju-gallery__slide" data-idx="0">
+            <img src="/images/natural-burial/namyangju/namyangju-01.jpg" alt="남양주 자연장 수목 안치 구역 전경" loading="eager" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="1">
+            <img src="/images/natural-burial/namyangju/namyangju-02.jpg" alt="남양주 자연장 수목 공간" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="2">
+            <img src="/images/natural-burial/namyangju/namyangju-03.jpg" alt="남양주 자연장 조경 전경" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="3">
+            <img src="/images/natural-burial/namyangju/namyangju-04.jpg" alt="남양주 자연장 시설 전경" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="4">
+            <img src="/images/natural-burial/namyangju/namyangju-05.jpg" alt="남양주 자연장 수목 구역 전망" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="5">
+            <img src="/images/natural-burial/namyangju/namyangju-06.jpg" alt="남양주 자연장 야외 조경 전경" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="6">
+            <img src="/images/natural-burial/namyangju/namyangju-07.jpg" alt="남양주 자연장 수목 시설 전경" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+          <figure class="namyangju-gallery__slide" data-idx="7">
+            <img src="/images/natural-burial/namyangju/namyangju-08.jpg" alt="남양주 자연장 수목 조경 전경" loading="lazy" class="namyangju-gallery__img" />
+          </figure>
+        </div>
+
+        <!-- 좌우 화살표 -->
+        <button class="namyangju-gallery__arrow namyangju-gallery__arrow--prev" aria-label="이전 이미지" type="button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="namyangju-gallery__arrow namyangju-gallery__arrow--next" aria-label="다음 이미지" type="button">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- 카운터 -->
+        <div class="namyangju-gallery__counter" aria-label="이미지 위치">
+          <span class="namyangju-gallery__counter-cur">1</span>
+          <span class="namyangju-gallery__counter-sep"> / </span>
+          <span class="namyangju-gallery__counter-tot">8</span>
+        </div>
+      </div><!-- /.namyangju-gallery__main -->
+
+      <!-- 썸네일 트랙 -->
+      <div class="namyangju-gallery__thumbs" role="tablist" aria-label="이미지 목록">
+        <button class="namyangju-gallery__thumb namyangju-gallery__thumb--active" role="tab" aria-selected="true"  data-idx="0" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-01.jpg" alt="썸네일 1" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="1" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-02.jpg" alt="썸네일 2" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="2" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-03.jpg" alt="썸네일 3" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="3" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-04.jpg" alt="썸네일 4" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="4" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-05.jpg" alt="썸네일 5" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="5" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-06.jpg" alt="썸네일 6" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="6" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-07.jpg" alt="썸네일 7" loading="lazy" />
+        </button>
+        <button class="namyangju-gallery__thumb" role="tab" aria-selected="false" data-idx="7" type="button">
+          <img src="/images/natural-burial/namyangju/namyangju-08.jpg" alt="썸네일 8" loading="lazy" />
+        </button>
+      </div><!-- /.namyangju-gallery__thumbs -->
+
+    </div><!-- /#namyangju-gallery -->
+
+  </div>
+</section>
+
+<style>
+/* ── 남양주자연장 갤러리 ── */
+.namyangju-gallery { --gap: 8px; }
+.namyangju-gallery__main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.namyangju-gallery__slides {
+  display: flex;
+  width: 100%;
+  transition: transform .35s ease;
+}
+.namyangju-gallery__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.namyangju-gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+}
+@media (max-width: 640px) {
+  .namyangju-gallery__img { max-height: 280px; }
+}
+.namyangju-gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.82);
+  color: #1a3a1a;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  transition: background .2s;
+}
+.namyangju-gallery__arrow:hover { background: #fff; }
+.namyangju-gallery__arrow--prev { left: 12px; }
+.namyangju-gallery__arrow--next { right: 12px; }
+@media (max-width: 640px) {
+  .namyangju-gallery__arrow { width: 32px; height: 32px; font-size: 12px; }
+  .namyangju-gallery__arrow--prev { left: 6px; }
+  .namyangju-gallery__arrow--next { right: 6px; }
+}
+.namyangju-gallery__counter {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(0,0,0,.45);
+  padding: 2px 8px;
+  border-radius: 20px;
+  pointer-events: none;
+  line-height: 1.6;
+}
+.namyangju-gallery__thumbs {
+  display: flex;
+  gap: var(--gap);
+  margin-top: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+.namyangju-gallery__thumbs::-webkit-scrollbar { display: none; }
+.namyangju-gallery__thumb {
+  flex: 0 0 calc((100% - 7 * var(--gap)) / 8);
+  min-width: 48px;
+  max-width: 90px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  transition: border-color .2s, opacity .2s;
+  opacity: .65;
+}
+.namyangju-gallery__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.namyangju-gallery__thumb--active {
+  border-color: #15803d;
+  opacity: 1;
+}
+.namyangju-gallery__thumb:hover:not(.namyangju-gallery__thumb--active) { opacity: .85; }
+</style>
+
+<script>
+(function () {
+  var gallery = document.getElementById('namyangju-gallery');
+  if (!gallery) return;
+
+  var slides     = gallery.querySelectorAll('.namyangju-gallery__slide');
+  var thumbs     = gallery.querySelectorAll('.namyangju-gallery__thumb');
+  var track      = gallery.querySelector('.namyangju-gallery__slides');
+  var btnPrev    = gallery.querySelector('.namyangju-gallery__arrow--prev');
+  var btnNext    = gallery.querySelector('.namyangju-gallery__arrow--next');
+  var counterCur = gallery.querySelector('.namyangju-gallery__counter-cur');
+  var thumbWrap  = gallery.querySelector('.namyangju-gallery__thumbs');
+
+  var current = 0;
+  var total   = slides.length;
+
+  function goTo(idx) {
+    if (idx < 0) idx = total - 1;
+    if (idx >= total) idx = 0;
+    current = idx;
+    track.style.transform = 'translateX(-' + (100 * current) + '%)';
+    counterCur.textContent = current + 1;
+    thumbs.forEach(function (t, i) {
+      var active = i === current;
+      t.classList.toggle('namyangju-gallery__thumb--active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    var activeThumb = thumbs[current];
+    if (activeThumb && thumbWrap) {
+      var tw = thumbWrap.offsetWidth;
+      var tLeft = activeThumb.offsetLeft;
+      var tW    = activeThumb.offsetWidth;
+      thumbWrap.scrollTo({ left: tLeft - tw / 2 + tW / 2, behavior: 'smooth' });
+    }
+  }
+
+  btnPrev.addEventListener('click', function () { goTo(current - 1); });
+  btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+  thumbs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      goTo(parseInt(t.dataset.idx, 10));
+    });
+  });
+
+  var touchStartX = 0;
+  var touchStartY = 0;
+  var mainEl = gallery.querySelector('.namyangju-gallery__main');
+
+  mainEl.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].clientX;
+    touchStartY = e.changedTouches[0].clientY;
+  }, { passive: true });
+
+  mainEl.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) goTo(current + 1);
+      else         goTo(current - 1);
+    }
+  }, { passive: true });
+
+  mainEl.setAttribute('tabindex', '0');
+  mainEl.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  goTo(0);
+})();
+</script>
+
 <section class="py-14 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
