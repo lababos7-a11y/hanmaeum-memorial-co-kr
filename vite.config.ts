@@ -33,6 +33,9 @@ function copyStaticPlugin() {
       // 메인 히어로 슬라이드 이미지 복사
       copyDirSync('public/images/main', 'dist/images/main')
       console.log('✓ images/main/ copied')
+      // 일산 자연장 실사 이미지 복사
+      copyDirSync('public/images/natural-burial/ilsan', 'dist/images/natural-burial/ilsan')
+      console.log('✓ images/natural-burial/ilsan/ copied')
     }
   }
 }
