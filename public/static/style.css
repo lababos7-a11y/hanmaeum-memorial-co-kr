@@ -76,6 +76,60 @@ img { max-width: 100%; height: auto; display: block; }
   #topBtn { bottom: calc(84px + 12px) !important; }
 }
 
+
+/* ── 인라인 전화 CTA 블록 ── */
+.cta-inline {
+  margin: 2rem 0;
+  background: #EEF5FA;
+  border: 1.5px solid #C9DFF0;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+.cta-inline .cta-label {
+  font-size: 0.95rem;
+  color: #4a6070;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.cta-inline .cta-sub {
+  font-size: 0.82rem;
+  color: #7a94a6;
+  line-height: 1.5;
+}
+.cta-inline .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1469B2;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.65rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.cta-inline .cta-btn:hover { background: #0F568F; }
+.cta-inline .cta-btn:active { background: #0d4c7e; }
+@media (min-width: 768px) {
+  .cta-inline {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cta-inline .cta-texts { flex: 1; }
+}
+
 /* ── FAQ ── */
 .faq-answer { max-height: 0; overflow: hidden; padding: 0 20px; transition: max-height 0.4s ease, padding 0.3s ease; }
 .faq-answer.faq-open { max-height: 800px; padding: 8px 20px 20px 20px; }
