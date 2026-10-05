@@ -114,9 +114,7 @@ export default defineConfig({
         'memorial-hall-uiwang': resolve(__dirname, 'public/memorial-hall/uiwang/index.html'),
         'memorial-hall-yangpyeong': resolve(__dirname, 'public/memorial-hall/yangpyeong/index.html'),
         'memorial-hall-yongin': resolve(__dirname, 'public/memorial-hall/yongin/index.html'),
-        // 3차 신규: 추모공원 3개
-        'memorial-park-gapyeong': resolve(__dirname, 'public/memorial-park/gapyeong/index.html'),
-        'memorial-park-namyangju': resolve(__dirname, 'public/memorial-park/namyangju/index.html'),
+        // 3차 신규: 추모공원 (gapyeong·namyangju 페이지 제거로 input 삭제)
         'memorial-park-yongin': resolve(__dirname, 'public/memorial-park/yongin/index.html'),
         // 6.5차 신규: 누락 지역 5개
         'natural-burial-pyeongtaek': resolve(__dirname, 'public/natural-burial/pyeongtaek/index.html'),
