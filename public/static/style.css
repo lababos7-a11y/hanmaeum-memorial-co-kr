@@ -60,19 +60,20 @@ img { max-width: 100%; height: auto; display: block; }
 .mobile-call-bar {
   display: none;
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0; left: 8px; right: 8px;
   z-index: 9999;
-  background: #173B57;
-  padding: 10px 16px;
-  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  background: #F5C518;
+  border-radius: 11px;
+  margin-bottom: 10px;
+  margin-bottom: calc(10px + env(safe-area-inset-bottom));
+  height: 58px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 @media (max-width: 767px) {
   .mobile-call-bar { display: flex; align-items: center; justify-content: center; }
-  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  body { padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
   .float-btn { display: none !important; }
-  #topBtn { bottom: calc(68px + 12px) !important; }
-  .call-number { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
-  .call-text   { font-size: 14px; font-weight: 700; color: #fff; }
+  #topBtn { bottom: calc(84px + 12px) !important; }
 }
 
 /* ── FAQ ── */
@@ -105,7 +106,8 @@ button, [role="button"] { touch-action: manipulation; }
 
 /* ── 모바일 하단 전화 바 누름 ── */
 @media (max-width: 767px) {
-  .mobile-call-link:active { filter: brightness(0.88); transform: scale(0.97); }
+  .mobile-call-link { display: flex; align-items: center; justify-content: center; gap: 10px; height: 100%; width: 100%; border-radius: 11px; }
+  .mobile-call-link:active { background: rgba(0,0,0,0.06); border-radius: 11px; }
 }
 
 /* ── 테이블 모바일 스크롤 ── */
