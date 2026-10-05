@@ -54,6 +54,9 @@ function copyStaticPlugin() {
       // 양평 자연장 실사 이미지 복사
       copyDirSync('public/images/natural-burial/yangpyeong', 'dist/images/natural-burial/yangpyeong')
       console.log('✓ images/natural-burial/yangpyeong/ copied')
+      // 화성 자연장 실사 이미지 복사
+      copyDirSync('public/images/natural-burial/hwaseong', 'dist/images/natural-burial/hwaseong')
+      console.log('✓ images/natural-burial/hwaseong/ copied')
     }
   }
 }
