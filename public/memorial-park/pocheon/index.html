@@ -75,6 +75,151 @@
   </div>
 </section>
 
+<!-- 포천추모공원 이미지 갤러리 슬라이드 -->
+<section class="bg-white pt-10 pb-0">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-lg font-bold text-gray-800 mb-4">포천추모공원 시설 갤러리</h2>
+    <div id="pocheon-gallery" class="pocheon-gallery">
+      <div class="pocheon-gallery__main rounded-2xl overflow-hidden shadow-md relative select-none" style="background:#0f172a;">
+        <div class="pocheon-gallery__slides" aria-live="polite">
+          <figure class="pocheon-gallery__slide" data-idx="0">
+            <img src="/images/memorial-park/pocheon/pocheon-01.jpg" alt="포천추모공원 잔디 봉안묘 열지어 배열된 구역 전경" loading="eager" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="1">
+            <img src="/images/memorial-park/pocheon/pocheon-02.jpg" alt="포천추모공원 테라스식 석조 봉안묘 계단형 단지" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="2">
+            <img src="/images/memorial-park/pocheon/pocheon-03.jpg" alt="포천추모공원 신규 잔디 평장묘 구역 근경" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="3">
+            <img src="/images/memorial-park/pocheon/pocheon-04.jpg" alt="포천추모공원 화강암 봉안묘 꽃 장식 근접" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="4">
+            <img src="/images/memorial-park/pocheon/pocheon-05.jpg" alt="포천추모공원 은하석 봉안묘 은행잎 조각 단지" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="5">
+            <img src="/images/memorial-park/pocheon/pocheon-06.jpg" alt="포천추모공원 다양한 석재 묘비 열지어 배열된 구역" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+          <figure class="pocheon-gallery__slide" data-idx="6">
+            <img src="/images/memorial-park/pocheon/pocheon-07.jpg" alt="포천추모공원 언덕 위에서 바라본 단지 전경과 주변 풍광" loading="lazy" class="pocheon-gallery__img" />
+          </figure>
+        </div>
+        <button class="pocheon-gallery__arrow pocheon-gallery__arrow--prev" aria-label="이전 이미지" type="button"><i class="fas fa-chevron-left"></i></button>
+        <button class="pocheon-gallery__arrow pocheon-gallery__arrow--next" aria-label="다음 이미지" type="button"><i class="fas fa-chevron-right"></i></button>
+        <div class="pocheon-gallery__counter" aria-label="이미지 위치">
+          <span class="pocheon-gallery__counter-cur">1</span>
+          <span class="pocheon-gallery__counter-sep"> / </span>
+          <span class="pocheon-gallery__counter-tot">7</span>
+        </div>
+      </div>
+      <div class="pocheon-gallery__thumbs" role="tablist" aria-label="이미지 목록">
+        <button class="pocheon-gallery__thumb pocheon-gallery__thumb--active" role="tab" aria-selected="true" aria-label="이미지 1" data-idx="0" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-01.jpg" alt="" loading="eager" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 2" data-idx="1" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-02.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 3" data-idx="2" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-03.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 4" data-idx="3" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-04.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 5" data-idx="4" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-05.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 6" data-idx="5" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-06.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+        <button class="pocheon-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 7" data-idx="6" type="button">
+          <img src="/images/memorial-park/pocheon/pocheon-07.jpg" alt="" loading="lazy" class="pocheon-gallery__thumb-img" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.pocheon-gallery { --gap: 8px; display: flex; flex-direction: column; gap: 10px; }
+.pocheon-gallery__main { aspect-ratio: 16/9; }
+.pocheon-gallery__slides { display: flex; width: 100%; height: 100%; transition: none; }
+.pocheon-gallery__slide { flex: 0 0 100%; width: 100%; height: 100%; margin: 0; padding: 0; }
+.pocheon-gallery__img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.pocheon-gallery__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.45); color: #fff; border: none; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; z-index: 10; transition: background 0.2s;
+}
+.pocheon-gallery__arrow:hover { background: rgba(0,0,0,0.7); }
+.pocheon-gallery__arrow--prev { left: 12px; }
+.pocheon-gallery__arrow--next { right: 12px; }
+.pocheon-gallery__counter {
+  position: absolute; bottom: 12px; right: 14px;
+  background: rgba(0,0,0,0.5); color: #fff;
+  font-size: 13px; padding: 2px 10px; border-radius: 20px; pointer-events: none;
+}
+.pocheon-gallery__thumbs {
+  display: flex; gap: var(--gap); overflow-x: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.pocheon-gallery__thumbs::-webkit-scrollbar { display: none; }
+.pocheon-gallery__thumb {
+  flex: 0 0 calc((100% - 6 * var(--gap)) / 7);
+  min-width: 48px; max-width: 90px; aspect-ratio: 1/1;
+  border: 2px solid transparent; border-radius: 8px;
+  overflow: hidden; padding: 0; cursor: pointer; background: none;
+  transition: border-color 0.2s;
+}
+.pocheon-gallery__thumb--active { border-color: #d97706; }
+.pocheon-gallery__thumb-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+<script>
+(function () {
+  var gallery = document.getElementById('pocheon-gallery');
+  if (!gallery) return;
+  var slides    = gallery.querySelectorAll('.pocheon-gallery__slide');
+  var thumbs    = gallery.querySelectorAll('.pocheon-gallery__thumb');
+  var cur       = gallery.querySelector('.pocheon-gallery__counter-cur');
+  var slidesWrap = gallery.querySelector('.pocheon-gallery__slides');
+  var total     = slides.length;
+  var idx       = 0;
+
+  function goTo(n) {
+    idx = (n + total) % total;
+    slidesWrap.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    slidesWrap.style.transition = 'transform 0.35s ease';
+    slidesWrap.style.display = 'flex';
+    if (cur) cur.textContent = idx + 1;
+    thumbs.forEach(function (t, i) {
+      t.classList.toggle('pocheon-gallery__thumb--active', i === idx);
+      t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+  }
+
+  gallery.querySelector('.pocheon-gallery__arrow--prev').addEventListener('click', function () { goTo(idx - 1); });
+  gallery.querySelector('.pocheon-gallery__arrow--next').addEventListener('click', function () { goTo(idx + 1); });
+
+  thumbs.forEach(function (t) {
+    t.addEventListener('click', function () { goTo(parseInt(t.dataset.idx, 10)); });
+  });
+
+  gallery.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  { goTo(idx - 1); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { goTo(idx + 1); e.preventDefault(); }
+  });
+
+  var tx = 0;
+  gallery.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  gallery.addEventListener('touchend',   function (e) {
+    var dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 40) { goTo(dx < 0 ? idx + 1 : idx - 1); }
+  }, { passive: true });
+
+  goTo(0);
+})();
+</script>
+
 <section class="py-14 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
