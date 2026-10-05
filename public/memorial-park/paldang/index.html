@@ -75,6 +75,151 @@
   </div>
 </section>
 
+<!-- 팔당추모공원 이미지 갤러리 슬라이드 -->
+<section class="bg-white pt-10 pb-0">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-lg font-bold text-gray-800 mb-4">팔당추모공원 시설 갤러리</h2>
+    <div id="paldang-gallery" class="paldang-gallery">
+      <div class="paldang-gallery__main rounded-2xl overflow-hidden shadow-md relative select-none" style="background:#0f172a;">
+        <div class="paldang-gallery__slides" aria-live="polite">
+          <figure class="paldang-gallery__slide" data-idx="0">
+            <img src="/images/memorial-park/paldang/paldang-01.jpg" alt="팔당추모공원 잔디 공원형 매장묘 구역 전경" loading="eager" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="1">
+            <img src="/images/memorial-park/paldang/paldang-02.jpg" alt="팔당추모공원 계단식 잔디 평장묘 파노라마" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="2">
+            <img src="/images/memorial-park/paldang/paldang-03.jpg" alt="팔당추모공원 봉안묘 열 잔디 경관" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="3">
+            <img src="/images/memorial-park/paldang/paldang-04.jpg" alt="팔당추모공원 테라스형 석조 봉안묘 구역" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="4">
+            <img src="/images/memorial-park/paldang/paldang-05.jpg" alt="팔당추모공원 화강암 봉안묘 꽃 장식 근접" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="5">
+            <img src="/images/memorial-park/paldang/paldang-06.jpg" alt="팔당추모공원 다색 화강암 잔디 묘역 전경" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+          <figure class="paldang-gallery__slide" data-idx="6">
+            <img src="/images/memorial-park/paldang/paldang-07.jpg" alt="팔당추모공원 잔디 평장묘 계단식 조성" loading="lazy" class="paldang-gallery__img" />
+          </figure>
+        </div>
+        <button class="paldang-gallery__arrow paldang-gallery__arrow--prev" aria-label="이전 이미지" type="button"><i class="fas fa-chevron-left"></i></button>
+        <button class="paldang-gallery__arrow paldang-gallery__arrow--next" aria-label="다음 이미지" type="button"><i class="fas fa-chevron-right"></i></button>
+        <div class="paldang-gallery__counter" aria-label="이미지 위치">
+          <span class="paldang-gallery__counter-cur">1</span>
+          <span class="paldang-gallery__counter-sep"> / </span>
+          <span class="paldang-gallery__counter-tot">7</span>
+        </div>
+      </div>
+      <div class="paldang-gallery__thumbs" role="tablist" aria-label="이미지 목록">
+        <button class="paldang-gallery__thumb paldang-gallery__thumb--active" role="tab" aria-selected="true" aria-label="이미지 1" data-idx="0" type="button">
+          <img src="/images/memorial-park/paldang/paldang-01.jpg" alt="" loading="eager" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 2" data-idx="1" type="button">
+          <img src="/images/memorial-park/paldang/paldang-02.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 3" data-idx="2" type="button">
+          <img src="/images/memorial-park/paldang/paldang-03.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 4" data-idx="3" type="button">
+          <img src="/images/memorial-park/paldang/paldang-04.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 5" data-idx="4" type="button">
+          <img src="/images/memorial-park/paldang/paldang-05.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 6" data-idx="5" type="button">
+          <img src="/images/memorial-park/paldang/paldang-06.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+        <button class="paldang-gallery__thumb" role="tab" aria-selected="false" aria-label="이미지 7" data-idx="6" type="button">
+          <img src="/images/memorial-park/paldang/paldang-07.jpg" alt="" loading="lazy" class="paldang-gallery__thumb-img" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.paldang-gallery { --gap: 8px; display: flex; flex-direction: column; gap: 10px; }
+.paldang-gallery__main { aspect-ratio: 16/9; }
+.paldang-gallery__slides { display: flex; width: 100%; height: 100%; transition: none; }
+.paldang-gallery__slide { flex: 0 0 100%; width: 100%; height: 100%; margin: 0; padding: 0; }
+.paldang-gallery__img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.paldang-gallery__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.45); color: #fff; border: none; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; z-index: 10; transition: background 0.2s;
+}
+.paldang-gallery__arrow:hover { background: rgba(0,0,0,0.7); }
+.paldang-gallery__arrow--prev { left: 12px; }
+.paldang-gallery__arrow--next { right: 12px; }
+.paldang-gallery__counter {
+  position: absolute; bottom: 12px; right: 14px;
+  background: rgba(0,0,0,0.5); color: #fff;
+  font-size: 13px; padding: 2px 10px; border-radius: 20px; pointer-events: none;
+}
+.paldang-gallery__thumbs {
+  display: flex; gap: var(--gap); overflow-x: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.paldang-gallery__thumbs::-webkit-scrollbar { display: none; }
+.paldang-gallery__thumb {
+  flex: 0 0 calc((100% - 6 * var(--gap)) / 7);
+  min-width: 48px; max-width: 90px; aspect-ratio: 1/1;
+  border: 2px solid transparent; border-radius: 8px;
+  overflow: hidden; padding: 0; cursor: pointer; background: none;
+  transition: border-color 0.2s;
+}
+.paldang-gallery__thumb--active { border-color: #d97706; }
+.paldang-gallery__thumb-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+</style>
+<script>
+(function () {
+  var gallery = document.getElementById('paldang-gallery');
+  if (!gallery) return;
+  var slides    = gallery.querySelectorAll('.paldang-gallery__slide');
+  var thumbs    = gallery.querySelectorAll('.paldang-gallery__thumb');
+  var cur       = gallery.querySelector('.paldang-gallery__counter-cur');
+  var slidesWrap = gallery.querySelector('.paldang-gallery__slides');
+  var total     = slides.length;
+  var idx       = 0;
+
+  function goTo(n) {
+    idx = (n + total) % total;
+    slidesWrap.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    slidesWrap.style.transition = 'transform 0.35s ease';
+    slidesWrap.style.display = 'flex';
+    if (cur) cur.textContent = idx + 1;
+    thumbs.forEach(function (t, i) {
+      t.classList.toggle('paldang-gallery__thumb--active', i === idx);
+      t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+  }
+
+  gallery.querySelector('.paldang-gallery__arrow--prev').addEventListener('click', function () { goTo(idx - 1); });
+  gallery.querySelector('.paldang-gallery__arrow--next').addEventListener('click', function () { goTo(idx + 1); });
+
+  thumbs.forEach(function (t) {
+    t.addEventListener('click', function () { goTo(parseInt(t.dataset.idx, 10)); });
+  });
+
+  gallery.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  { goTo(idx - 1); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { goTo(idx + 1); e.preventDefault(); }
+  });
+
+  var tx = 0;
+  gallery.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  gallery.addEventListener('touchend',   function (e) {
+    var dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 40) { goTo(dx < 0 ? idx + 1 : idx - 1); }
+  }, { passive: true });
+
+  goTo(0);
+})();
+</script>
+
 <section class="py-14 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
