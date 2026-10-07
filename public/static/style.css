@@ -217,3 +217,34 @@ button, [role="button"] { touch-action: manipulation; }
   .pict-icon.pict-lg { font-size: 2rem;   }
   .pict-icon.pict-xl { font-size: 3rem;   }
 }
+
+/* ── 모바일 섹션 순서 재배열 + 장지비교 이미지 ─────────── */
+
+/* PC 기본: wrapper는 단순 블록 */
+.mobile-reorder-wrapper { display: block; }
+.mobile-order-situation { order: 0; }
+.mobile-order-compare   { order: 0; }
+
+/* 장지비교 카드: 기본(PC) → 이미지 숨김, 픽토그램 표시 */
+.compare-img-mobile   { display: none; }
+.compare-title-mobile { display: none; }
+.compare-picto-pc     { display: block; }
+
+@media (max-width: 767px) {
+  /* 모바일: wrapper를 flex-column으로 전환 → order로 순서 변경 */
+  .mobile-reorder-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-order-compare   { order: 1; } /* 장지비교 먼저 */
+  .mobile-order-situation { order: 2; } /* 상황별 안내 나중 */
+
+  /* 장지비교 카드: 이미지 표시, 픽토그램 숨김 */
+  .compare-img-mobile {
+    display: block;
+    height: 150px;
+    overflow: hidden;
+  }
+  .compare-title-mobile { display: block; }
+  .compare-picto-pc     { display: none; }
+}

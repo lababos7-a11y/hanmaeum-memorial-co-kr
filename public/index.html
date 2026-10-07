@@ -233,8 +233,11 @@
   </div>
 </section>
 
+<!-- ══ 모바일 섹션 순서 wrapper: 장지비교↑ 상황별↓ ══ -->
+<div class="mobile-reorder-wrapper">
+
 <!-- ══ 현재 상황 선택 ══ -->
-<section class="section-py py-12 bg-gray-50">
+<section class="section-py py-12 bg-gray-50 mobile-order-situation">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-8">
       <span class="section-badge">상황별 안내</span>
@@ -264,7 +267,7 @@
 </section>
 
 <!-- ══ 장지 비교 ══ -->
-<section class="section-py py-14 bg-white">
+<section class="section-py py-14 bg-white mobile-order-compare">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-10">
       <span class="section-badge">장지 비교</span>
@@ -274,8 +277,19 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- 수목장 -->
       <div class="info-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="bg-green-50 p-6 text-center">
+        <!-- 모바일: 실제 이미지 / PC: 픽토그램 -->
+        <div class="compare-img-mobile">
+          <img src="/images/natural-burial/yongin/yongin-01.jpg" alt="자연장 수목 안치 구역 전경"
+               width="800" height="533" loading="lazy" decoding="async"
+               style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+        </div>
+        <div class="bg-green-50 p-6 text-center compare-picto-pc">
           <div class="text-5xl mb-3"><i class="fas fa-tree pict-icon pict-lg" aria-hidden="true"></i></div>
+          <h3 class="text-lg font-bold text-gray-800">자연장 (수목장·잔디장)</h3>
+          <p class="text-blue-600 font-bold text-sm mt-1">200만원~</p>
+        </div>
+        <!-- 모바일 전용 제목+가격 -->
+        <div class="compare-title-mobile bg-green-50 px-4 py-3 text-center">
           <h3 class="text-lg font-bold text-gray-800">자연장 (수목장·잔디장)</h3>
           <p class="text-blue-600 font-bold text-sm mt-1">200만원~</p>
         </div>
@@ -291,34 +305,52 @@
       </div>
       <!-- 납골당 -->
       <div class="info-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="bg-blue-50 p-6 text-center">
+        <div class="compare-img-mobile">
+          <img src="/images/memorial-hall/ilsan/ilsan-02.jpg" alt="봉안당 실내 안치실 전경"
+               width="900" height="506" loading="lazy" decoding="async"
+               style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+        </div>
+        <div class="bg-blue-50 p-6 text-center compare-picto-pc">
           <div class="text-5xl mb-3"><i class="fas fa-landmark pict-icon pict-lg" aria-hidden="true"></i></div>
           <h3 class="text-lg font-bold text-gray-800">봉안당 (납골당)</h3>
-          <p class="text-blue-600 font-bold text-sm mt-1">150만원~</p>
+          <p class="text-blue-600 font-bold text-sm mt-1">120만원~</p>
+        </div>
+        <div class="compare-title-mobile bg-blue-50 px-4 py-3 text-center">
+          <h3 class="text-lg font-bold text-gray-800">봉안당 (납골당)</h3>
+          <p class="text-blue-600 font-bold text-sm mt-1">120만원~</p>
         </div>
         <div class="p-6">
           <ul class="space-y-2 text-sm text-gray-600">
             <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-0.5"></i>현대식 실내 봉안 시설, 연중 방문 가능</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-0.5"></i>1인~4인 다양한 규모·비용대 비교</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-0.5"></i>엘리베이터·냉난방 등 편의시설 완비</li>
-            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-0.5"></i>150만원~부터 다양한 비용대</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-0.5"></i>120만원~부터 다양한 비용대</li>
           </ul>
           <a href="/memorial-hall/" class="mt-4 block text-center text-blue-600 font-medium text-sm hover:underline">봉안당 자세히 보기 →</a>
         </div>
       </div>
       <!-- 공원묘지 -->
       <div class="info-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-        <div class="bg-amber-50 p-6 text-center">
+        <div class="compare-img-mobile">
+          <img src="/images/memorial-park/pocheon/pocheon-01.jpg" alt="추모공원 시설 전경"
+               width="800" height="533" loading="lazy" decoding="async"
+               style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+        </div>
+        <div class="bg-amber-50 p-6 text-center compare-picto-pc">
           <div class="text-5xl mb-3"><i class="fas fa-campground pict-icon pict-lg" aria-hidden="true"></i></div>
           <h3 class="text-lg font-bold text-gray-800">추모공원 (공원묘지)</h3>
-          <p class="text-blue-600 font-bold text-sm mt-1">500만원~</p>
+          <p class="text-blue-600 font-bold text-sm mt-1">700만원~</p>
+        </div>
+        <div class="compare-title-mobile bg-amber-50 px-4 py-3 text-center">
+          <h3 class="text-lg font-bold text-gray-800">추모공원 (공원묘지)</h3>
+          <p class="text-blue-600 font-bold text-sm mt-1">700만원~</p>
         </div>
         <div class="p-6">
           <ul class="space-y-2 text-sm text-gray-600">
             <li class="flex items-start gap-2"><i class="fas fa-check text-amber-500 mt-0.5"></i>매장묘 · 평장묘 · 봉안묘 선택 가능</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-amber-500 mt-0.5"></i>가족묘 · 부부묘 등 다양한 구성</li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-amber-500 mt-0.5"></i>쾌적한 공원 환경, 주차 편의</li>
-            <li class="flex items-start gap-2"><i class="fas fa-check text-amber-500 mt-0.5"></i>500만원~부터 다양한 비용대</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-amber-500 mt-0.5"></i>700만원~부터 다양한 비용대</li>
           </ul>
           <a href="/memorial-park/" class="mt-4 block text-center text-blue-600 font-medium text-sm hover:underline">추모공원 자세히 보기 →</a>
         </div>
@@ -326,6 +358,8 @@
     </div>
   </div>
 </section>
+
+</div><!-- /.mobile-reorder-wrapper -->
 
 <div class="max-w-6xl mx-auto px-4">
 <div class="cta-inline">
