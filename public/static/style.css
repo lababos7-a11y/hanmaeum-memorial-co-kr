@@ -218,6 +218,47 @@ button, [role="button"] { touch-action: manipulation; }
   .pict-icon.pict-xl { font-size: 3rem;   }
 }
 
+/* ── 장지비교 카드 CTA 버튼 ──────────────────────────────── */
+.compare-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9375rem;   /* 15px: 기존 text-sm(14px)보다 약간 크게 */
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.compare-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.14);
+}
+
+/* 자연장: 연한 green */
+.compare-cta--green {
+  background: #DCFCE7;   /* green-100 */
+  color: #14532D;        /* green-900 */
+}
+.compare-cta--green:hover { background: #BBF7D0; } /* green-200 */
+
+/* 봉안당: 연한 blue */
+.compare-cta--blue {
+  background: #DBEAFE;   /* blue-100 */
+  color: #1E3A8A;        /* blue-900 */
+}
+.compare-cta--blue:hover { background: #BFDBFE; } /* blue-200 */
+
+/* 추모공원: 연한 amber */
+.compare-cta--amber {
+  background: #FEF3C7;   /* amber-100 */
+  color: #78350F;        /* amber-900 */
+}
+.compare-cta--amber:hover { background: #FDE68A; } /* amber-200 */
+
 /* ── 카테고리 전체보기 바로가기 3종 ─────────────────────── */
 
 /* 공통 wrapper */
