@@ -218,6 +218,35 @@ button, [role="button"] { touch-action: manipulation; }
   .pict-icon.pict-xl { font-size: 3rem;   }
 }
 
+/* ── 카테고리 전체보기 바로가기 3종 ─────────────────────── */
+
+/* 공통 wrapper */
+.category-shortcuts {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* PC: pill 버튼 스타일 */
+.shortcut-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563EB;        /* bg-blue-600 */
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 9999px;      /* pill */
+  transition: background 0.15s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.shortcut-btn:hover { background: #1D4ED8; } /* hover:bg-blue-700 */
+
+.shortcut-icon { font-size: 0.95rem; }
+.shortcut-name { font-size: 0.9375rem; }
+.shortcut-label { font-size: 0.8125rem; opacity: 0.88; }
+
 /* ── 모바일 섹션 순서 재배열 + 장지비교 이미지 ─────────── */
 
 /* PC 기본: wrapper는 단순 블록 */
@@ -231,6 +260,27 @@ button, [role="button"] { touch-action: manipulation; }
 .compare-picto-pc     { display: block; }
 
 @media (max-width: 767px) {
+  /* 카테고리 바로가기: 모바일 3열 compact card */
+  .category-shortcuts {
+    width: 100%;
+    gap: 8px;
+  }
+  .shortcut-btn {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 12px 6px;
+    border-radius: 12px;      /* 카드형 */
+    white-space: normal;
+    text-align: center;
+    min-width: 0;
+  }
+  .shortcut-icon { font-size: 1.25rem; }
+  .shortcut-name { font-size: 0.75rem; line-height: 1.2; }
+  .shortcut-label { font-size: 0.6875rem; opacity: 0.85; line-height: 1.2; }
+
   /* 모바일: wrapper를 flex-column으로 전환 → order로 순서 변경 */
   .mobile-reorder-wrapper {
     display: flex;
