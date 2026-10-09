@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>한마음추모공원 | 자연장·봉안당·추모공원 정보</title>
+    <link>https://www.han-maum.co.kr/</link>
+    <description>자연장·봉안당·추모공원 선택과 비용, 위치, 장지 답사 및 이장·개장 관련 정보를 안내합니다.</description>
+    <language>ko-KR</language>
+    <item>
+      <title>자연장·봉안당·추모공원 장지 선택 정보</title>
+      <link>https://www.han-maum.co.kr/notice/</link>
+      <guid>https://www.han-maum.co.kr/notice/</guid>
+      <description>묘지 이장·개장 절차와 비용, 장지 답사 전 비교 기준, 수목장·봉안당 비용 확인 기준을 안내합니다.</description>
+    </item>
+  </channel>
+</rss>
